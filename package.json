@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@material-ui/styles": "^4.10.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",

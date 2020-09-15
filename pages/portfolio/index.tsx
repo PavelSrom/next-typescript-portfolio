@@ -9,6 +9,7 @@ const Portfolio: NextPage = () => {
       <Button type="primary" size="large">
         Hello
       </Button>
+      <img src="/images/IMG_0255.JPG" alt="" />
     </div>
   )
 }
