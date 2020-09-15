@@ -2,6 +2,8 @@ import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 import '../antd.less'
+import { ThemeProvider } from '@material-ui/styles'
+import { theme } from '../utils/theme'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -26,9 +28,11 @@ export default class MyApp extends App {
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
         </Head>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </ThemeProvider>
 
         <style jsx global>{`
           * {
