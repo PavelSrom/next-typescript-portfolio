@@ -44,7 +44,7 @@ const useStyles = makeStyles<Theme, ThemeProps>(theme => ({
   },
 }))
 
-type Props = ThemeProps & React.HTMLAttributes<HTMLElement>
+type Props = ThemeProps & React.HTMLAttributes<HTMLDivElement>
 
 // work in progress
 const ResponsiveContainer: React.FC<Props> = ({

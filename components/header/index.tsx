@@ -15,9 +15,12 @@ const useStyles = makeStyles<Theme>(theme => ({
     left: 0,
     zIndex: 90,
     width: '100%',
-    height: 66,
+    height: 48,
     display: 'flex',
     flexDirection: 'column',
+    [theme.breakpoints.up.md]: {
+      padding: `0 ${theme.spacing(4)}px`,
+    },
   },
   container: {
     height: '100%',
@@ -51,7 +54,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <header className={classes.header}>
-        <ResponsiveContainer noPadding className={classes.container}>
+        <ResponsiveContainer noPadding maxWidth="xl" className={classes.container}>
           <Link href="/">
             <a href="/">
               <p className="logo">{'<Pavel />'}</p>
@@ -97,7 +100,7 @@ const Footer: React.FC = () => {
         `}</style>
       </header>
 
-      <div style={{ marginBottom: 66 }} />
+      <div style={{ marginBottom: 48 }} />
     </>
   )
 }

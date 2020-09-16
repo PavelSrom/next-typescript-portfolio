@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
 import { Typography } from 'antd'
 import { TextProps } from 'antd/lib/typography/Text'
@@ -11,19 +12,39 @@ type ThemeProps = {
 }
 
 const useStyles = makeStyles<Theme, ThemeProps>(() => ({
+  headline: {
+    fontSize: 48,
+    fontWeight: 400,
+    marginBottom: 0,
+  },
+  subheadline: {
+    fontSize: 24,
+  },
   bodyText: {
     color: ({ color }) => color && color,
     fontSize: ({ sub }) => (sub ? 12 : 18),
   },
 }))
 
-const { Title, Text } = Typography
+const { Text } = Typography
 
-export const Headline: React.FC<TitleProps> = ({ children, ...rest }) => {
+export const Headline: React.FC<TitleProps> = ({ children, className, ...rest }) => {
+  const classes = useStyles({})
+
   return (
-    <Title {...rest} level={1}>
+    <h1 {...rest} className={classes.headline}>
       {children}
-    </Title>
+    </h1>
+  )
+}
+
+export const Subheadline: React.FC<TextProps> = ({ children, className, ...rest }) => {
+  const classes = useStyles({})
+
+  return (
+    <Text {...rest} className={clsx(className, classes.subheadline)}>
+      {children}
+    </Text>
   )
 }
 
