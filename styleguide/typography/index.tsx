@@ -20,6 +20,7 @@ const useStyles = makeStyles<Theme, ThemeProps>(() => ({
   subheadline: {
     display: 'block',
     fontSize: 24,
+    fontWeight: 350,
   },
   bodyText: {
     color: ({ color }) => color && color,
