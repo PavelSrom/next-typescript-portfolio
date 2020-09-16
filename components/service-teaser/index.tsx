@@ -1,5 +1,6 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import Link from 'next/link'
+import { Row, Col, Button } from 'antd'
 import {
   RiseOutlined,
   DatabaseOutlined,
@@ -14,7 +15,7 @@ import useResponsiveDesign from '../../utils/hooks'
 
 const useStyles = makeStyles<Theme>(theme => ({
   section: {
-    background: theme.color.lightblue,
+    background: theme.color.lightgray,
   },
   gridItem: {
     display: 'flex',
@@ -30,6 +31,10 @@ const useStyles = makeStyles<Theme>(theme => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     textAlign: 'center',
+  },
+  skillsBtn: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 }))
 
@@ -89,6 +94,14 @@ const ServiceTeaser: React.FC<Props> = ({ withButton }) => {
             </Col>
           ))}
         </Row>
+
+        {withButton && (
+          <div className={classes.skillsBtn} style={{ marginTop: spacing }}>
+            <Link href="/skills">
+              <Button type="default">View all skills</Button>
+            </Link>
+          </div>
+        )}
       </ResponsiveContainer>
     </section>
   )

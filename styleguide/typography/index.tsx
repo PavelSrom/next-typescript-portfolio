@@ -18,6 +18,7 @@ const useStyles = makeStyles<Theme, ThemeProps>(() => ({
     marginBottom: 0,
   },
   subheadline: {
+    display: 'block',
     fontSize: 24,
   },
   bodyText: {
