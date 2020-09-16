@@ -1,4 +1,4 @@
-type DeviceSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type DeviceSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export type Theme = {
   color: Record<'primary' | 'lightblue' | 'lightgray', string>

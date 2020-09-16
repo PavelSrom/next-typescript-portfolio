@@ -9,7 +9,7 @@ const container: React.CSSProperties = {
 }
 
 const Footer: React.FC = () => (
-  <div style={container}>
+  <footer style={container}>
     <ResponsiveContainer>
       <SocialMedia />
       <div style={{ margin: '40px 0' }}>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => (
         }
       }
     `}</style>
-  </div>
+  </footer>
 )
 
 export default Footer

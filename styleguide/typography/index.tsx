@@ -3,13 +3,14 @@ import { makeStyles } from '@material-ui/styles'
 import { Typography } from 'antd'
 import { TextProps } from 'antd/lib/typography/Text'
 import { TitleProps } from 'antd/lib/typography/Title'
+import { Theme } from '../../utils/theme'
 
 type ThemeProps = {
   color?: 'white'
   sub?: boolean
 }
 
-const useStyles = makeStyles<any, ThemeProps>(() => ({
+const useStyles = makeStyles<Theme, ThemeProps>(() => ({
   bodyText: {
     color: ({ color }) => color && color,
     fontSize: ({ sub }) => (sub ? 12 : 18),
