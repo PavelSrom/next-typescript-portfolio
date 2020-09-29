@@ -11,11 +11,14 @@ type ThemeProps = {
   sub?: boolean
 }
 
-const useStyles = makeStyles<Theme, ThemeProps>(() => ({
+const useStyles = makeStyles<Theme, ThemeProps>(theme => ({
   headline: {
     fontSize: 48,
     fontWeight: 400,
     marginBottom: 0,
+    [theme.breakpoints.down.md]: {
+      fontSize: 36,
+    },
   },
   subheadline: {
     display: 'block',

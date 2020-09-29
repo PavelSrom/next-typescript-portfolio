@@ -1,11 +1,12 @@
 import React from 'react'
 import { NextPage } from 'next'
+import ServiceTeaser from '../../components/service-teaser'
 
 const Skills: NextPage = () => {
   return (
-    <div>
-      <p>Skills page</p>
-    </div>
+    <>
+      <ServiceTeaser />
+    </>
   )
 }
 
