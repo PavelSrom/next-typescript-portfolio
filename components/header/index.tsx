@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Menu, Button, Drawer } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { makeStyles } from '@material-ui/styles'
@@ -49,8 +50,14 @@ const links = ['/about', '/portfolio', '/skills']
 
 const Footer: React.FC = () => {
   const classes = useStyles()
+  const router = useRouter()
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false)
   const [currentLink, setCurrentLink] = useState<string>('/')
+
+  // set active tab on refresh
+  useEffect(() => {
+    setCurrentLink(router.pathname)
+  }, [router.pathname])
 
   return (
     <>
