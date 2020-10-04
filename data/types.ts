@@ -27,3 +27,14 @@ export type Project = {
   github: string
   demo: string
 }
+
+export type AboutPage = {
+  shortIntro: {
+    headline: string
+    text: (string | JSX.Element)[]
+  }
+  detailedIntro: {
+    headline: string
+    text: (string | JSX.Element)[]
+  }[]
+}
