@@ -37,7 +37,7 @@ export const Headline: React.FC<TitleProps> = ({ children, className, ...rest })
   const classes = useStyles({})
 
   return (
-    <h1 {...rest} className={classes.headline}>
+    <h1 {...rest} className={clsx(classes.headline, className)}>
       {children}
     </h1>
   )
@@ -47,7 +47,7 @@ export const Subheadline: React.FC<TextProps> = ({ children, className, ...rest 
   const classes = useStyles({})
 
   return (
-    <Text {...rest} className={clsx(className, classes.subheadline)}>
+    <Text {...rest} className={clsx(classes.subheadline, className)}>
       {children}
     </Text>
   )

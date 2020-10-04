@@ -50,19 +50,25 @@ const links = ['/about', '/portfolio', '/skills']
 const Footer: React.FC = () => {
   const classes = useStyles()
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false)
+  const [currentLink, setCurrentLink] = useState<string>('/')
 
   return (
     <>
       <header className={classes.header}>
         <ResponsiveContainer noPadding maxWidth="xl" className={classes.container}>
           <Link href="/">
-            <a href="/">
+            <a href="/" onClick={() => setCurrentLink('/')}>
               <p className="logo">{'<Pavel />'}</p>
             </a>
           </Link>
 
           <nav className={classes.desktopNav}>
-            <Menu mode="horizontal" style={{ display: 'flex' }}>
+            <Menu
+              mode="horizontal"
+              selectedKeys={[currentLink]}
+              onClick={e => setCurrentLink(e.key as string)}
+              style={{ display: 'flex' }}
+            >
               {links.map(link => (
                 <Menu.Item key={link}>
                   <Link href={link}>

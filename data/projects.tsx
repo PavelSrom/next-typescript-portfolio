@@ -5,7 +5,7 @@ import { Project } from './types'
 
 export const projects: Project[] = [
   {
-    imgSrc: '/',
+    imgSrc: '/images/proj_ecommerce.png',
     headline: 'E-commerce website',
     bodyText: [
       `By far the best project I have ever made so far (early February,
@@ -15,10 +15,12 @@ export const projects: Project[] = [
 				MERN stack. Among other things, the back-end is using image
 				uploads, and pagination is implemented in both Express and React.`,
       <br />,
+      <br />,
       `It taught me a lot of new stuff - how to implement the pagination,
 				how to handle file uploads, and how to show different content
 				based on auth status. I've also learned how to properly render
 				without React-suspense.`,
+      <br />,
       <br />,
       `This project is by no means done - I have future plans. I'd like
 				to migrate the whole back-end to using GraphQL & Apollo (and maybe
@@ -31,7 +33,7 @@ export const projects: Project[] = [
     demo: 'https://pavel-ecommerce.herokuapp.com/',
   },
   {
-    imgSrc: '/',
+    imgSrc: '/images/proj_socmedApp.png',
     headline: 'Social media app',
     bodyText: [
       `The goal of this app was to practice using TypeScript within my
@@ -40,9 +42,11 @@ export const projects: Project[] = [
 			simple, either. I simply wanted to learn how to use TypeScript
 			with React, Redux, and Express.`,
       <br />,
+      <br />,
       `Another thing I have learned along the way is how to handle file
 			upload all the way from the client choosing a picture to the server
 			handling it.`,
+      <br />,
       <br />,
       `I have found that using TypeScript in my personal projects is too
 			much and unnecessary - however, I see the great advantage of TypeScript
@@ -54,7 +58,7 @@ export const projects: Project[] = [
     demo: 'https://murmuring-dusk-35278.herokuapp.com/',
   },
   {
-    imgSrc: '/',
+    imgSrc: '/images/proj_weightAppEnhanced.png',
     headline: 'Weight tracker app',
     bodyText: [
       `My very first project which I built right after finishing my
@@ -63,6 +67,7 @@ export const projects: Project[] = [
 			new is that I replaced SQL database with MongoDB, users can save
 			their favorite exercise, truly add only one log per day and see
 			all of their stats directly in dashboard.`,
+      <br />,
       <br />,
       `I focused mainly on building my API with Express and
 			MongoDB, managing user authentication in React via private routes,
