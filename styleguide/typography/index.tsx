@@ -58,11 +58,17 @@ type BodyTextProps = TextProps & {
   sub?: boolean
 }
 
-export const BodyText: React.FC<BodyTextProps> = ({ children, color, sub, ...rest }) => {
+export const BodyText: React.FC<BodyTextProps> = ({
+  children,
+  color,
+  sub,
+  className,
+  ...rest
+}) => {
   const classes = useStyles({ color, sub })
 
   return (
-    <Text {...rest} className={classes.bodyText}>
+    <Text {...rest} className={clsx(classes.bodyText, className)}>
       {children}
     </Text>
   )
