@@ -38,3 +38,8 @@ export type AboutPage = {
     text: (string | JSX.Element)[]
   }[]
 }
+
+export type Certificate = {
+  name: string
+  link: string
+}

@@ -9,6 +9,7 @@ import ResponsiveContainer from '../../styleguide/responsive-container'
 import ServiceTeaser from '../../components/service-teaser'
 import SkillsSimple from '../../components/skills-simple'
 import SkillsDetailed from '../../components/skills-detailed'
+import Certificates from '../../components/certificates'
 
 const useStyles = makeStyles<Theme>(theme => ({
   section: {
@@ -47,6 +48,7 @@ const Skills: NextPage = () => {
           {detailedVisible ? <SkillsDetailed /> : <SkillsSimple />}
         </ResponsiveContainer>
       </section>
+      <Certificates />
     </>
   )
 }
