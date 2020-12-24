@@ -43,3 +43,18 @@ export type Certificate = {
   name: string
   link: string
 }
+
+export type Experience = {
+  title: string
+  chips: {
+    company: string
+    duration: string
+    place: string
+  }
+  responsibilities: string
+  codebase: {
+    text: string
+    stack: string[]
+  }
+  myTakeaways: string
+}
