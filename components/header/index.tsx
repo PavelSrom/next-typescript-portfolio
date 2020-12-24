@@ -46,7 +46,7 @@ const useStyles = makeStyles<Theme>(theme => ({
   },
 }))
 
-const links = ['/about', '/portfolio', '/skills']
+const links: string[] = ['/about', '/work-experience', '/portfolio', '/skills']
 
 const Footer: React.FC = () => {
   const classes = useStyles()
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               {links.map(link => (
                 <Menu.Item key={link}>
                   <Link href={link}>
-                    <a href={link}>{link.slice(1).toUpperCase()}</a>
+                    <a href={link}>{link.slice(1).toUpperCase().split('-').join(' ')}</a>
                   </Link>
                 </Menu.Item>
               ))}
@@ -98,8 +98,21 @@ const Footer: React.FC = () => {
             onClose={() => setDrawerOpen(false)}
             title="Menu"
             placement="right"
+            bodyStyle={{ padding: 0 }}
           >
-            <p>Burger menu</p>
+            <Menu
+              mode="inline"
+              selectedKeys={[currentLink]}
+              onClick={e => setCurrentLink(e.key as string)}
+            >
+              {links.map(link => (
+                <Menu.Item key={link} onClick={() => setDrawerOpen(false)}>
+                  <Link href={link}>
+                    <a href={link}>{link.slice(1).toUpperCase().split('-').join(' ')}</a>
+                  </Link>
+                </Menu.Item>
+              ))}
+            </Menu>
           </Drawer>
         </ResponsiveContainer>
 
