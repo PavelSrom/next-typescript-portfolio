@@ -36,6 +36,11 @@ export const frontEnd: SkillTree = {
       description:
         "Great for the 'quick and dirty' stuff. Saves me a TON of time with styling, and it's quite customizable.",
     },
+    {
+      name: 'Tailwind CSS',
+      description:
+        'My go-to option for quickly building user interfaces. I love its versatility and customizability.',
+    },
   ],
   packageManagers: [
     {

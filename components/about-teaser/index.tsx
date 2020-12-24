@@ -27,8 +27,8 @@ const AboutTeaser: React.FC = () => {
           <Headline style={{ textAlign: 'center' }}>Something about me</Headline>
           <Subheadline style={{ marginBottom: 40 }}>
             I&apos;m a web developer based in Copenhagen, Denmark. I build websites and
-            web applications - from scratch to deployment. I fell in love with code a
-            while ago, and haven&apos;t looked back since.
+            web applications - from scratch to deployment. I fell in love with code (and
+            especially React) a while ago, and haven&apos;t looked back since.
           </Subheadline>
           <div className={classes.aboutBtn}>
             <Link href="/about">

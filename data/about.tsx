@@ -8,15 +8,15 @@ export const aboutPage: AboutPage = {
     headline: 'Me talking about myself',
     text: [
       `
-			I'm Pavel Srom, a MERN-stack web developer currently studying at UCN in
-            Aalborg, Denmark. As you can see from the counter above, I have been doing web
-            development for quite some time. My passion for creating web solutions led me
-            to learn a ton of exciting technologies in a relatively short amount of time,
-            and I'm still hungry for more.
+			I'm Pavel Srom, a MERN-stack web developer currently studying at CPH Business in
+      Copenhagen, Denmark. As you can see from the counter above, I have been doing web
+			development for quite some time. My passion for creating web solutions led me
+    	to learn a ton of exciting technologies in a relatively short amount of time,
+      and I'm still hungry for more.
 			`,
       <br />,
       `
-			Apart from web development, I enjoy an intensive workout session, czech candy,
+			Apart from web development, I enjoy an intensive workout session, Czech candy,
 			and a good latté. If you want to get to know me even more, feel free to scroll
 			down for further information.
 			`,
