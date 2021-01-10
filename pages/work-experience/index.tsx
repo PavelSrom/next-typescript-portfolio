@@ -1,5 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
+import Head from 'next/head'
 import { Tag, Divider } from 'antd'
 import { makeStyles } from '@material-ui/styles'
 import { Theme } from '../../utils/theme'
@@ -41,50 +42,59 @@ const WorkExperience: NextPage = () => {
   const classes = useStyles()
 
   return (
-    <section className={classes.section}>
-      <ResponsiveContainer>
-        {workExperiences.map(
-          ({ title, chips, responsibilities, codebase, myTakeaways }, index) => (
-            <LineLength key={title} narrow>
-              {index !== 0 && <Divider className={classes.divider} />}
+    <>
+      <Head>
+        <title>Homepage | Pavel Srom</title>
+        <meta
+          name="description"
+          content="Pavel Srom is a full-stack web developer currently living and studying in Copenhagen. He loves React, and the whole JavaScript ecosystem."
+        />
+      </Head>
+      <section className={classes.section}>
+        <ResponsiveContainer>
+          {workExperiences.map(
+            ({ title, chips, responsibilities, codebase, myTakeaways }, index) => (
+              <LineLength key={title} narrow>
+                {index !== 0 && <Divider className={classes.divider} />}
 
-              <div className={classes.header}>
-                <Headline style={{ textAlign: 'center' }}>{title}</Headline>
-                {Object.values(chips).map(chip => (
-                  <Tag key={chip} className={classes.chipInner}>
-                    {chip}
-                  </Tag>
-                ))}
-              </div>
-
-              <div className={classes.blockOfText}>
-                <Subheadline strong>My responsibilities</Subheadline>
-                <BodyText>{responsibilities}</BodyText>
-              </div>
-
-              <div className={classes.blockOfText}>
-                <Subheadline strong>About the codebase</Subheadline>
-                <BodyText>{codebase.text}</BodyText>
-
-                <div style={{ marginTop: 32 }}>
-                  <BodyText>Tech stack</BodyText>
-                  <ul className={classes.stack}>
-                    {codebase.stack.map(item => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
+                <div className={classes.header}>
+                  <Headline style={{ textAlign: 'center' }}>{title}</Headline>
+                  {Object.values(chips).map(chip => (
+                    <Tag key={chip} className={classes.chipInner}>
+                      {chip}
+                    </Tag>
+                  ))}
                 </div>
-              </div>
 
-              <div className={classes.blockOfText}>
-                <Subheadline strong>My takeaways</Subheadline>
-                <BodyText>{myTakeaways}</BodyText>
-              </div>
-            </LineLength>
-          )
-        )}
-      </ResponsiveContainer>
-    </section>
+                <div className={classes.blockOfText}>
+                  <Subheadline strong>My responsibilities</Subheadline>
+                  <BodyText>{responsibilities}</BodyText>
+                </div>
+
+                <div className={classes.blockOfText}>
+                  <Subheadline strong>About the codebase</Subheadline>
+                  <BodyText>{codebase.text}</BodyText>
+
+                  <div style={{ marginTop: 32 }}>
+                    <BodyText>Tech stack</BodyText>
+                    <ul className={classes.stack}>
+                      {codebase.stack.map(item => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={classes.blockOfText}>
+                  <Subheadline strong>My takeaways</Subheadline>
+                  <BodyText>{myTakeaways}</BodyText>
+                </div>
+              </LineLength>
+            )
+          )}
+        </ResponsiveContainer>
+      </section>
+    </>
   )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NextPage } from 'next'
+import Head from 'next/head'
 import { Switch } from 'antd'
 import { makeStyles } from '@material-ui/styles'
 import { Theme } from '../../utils/theme'
@@ -31,6 +32,13 @@ const Skills: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Skills | Pavel Srom</title>
+        <meta
+          name="description"
+          content="Pavel Srom is a full-stack web developer currently living and studying in Copenhagen. He loves React, and the whole JavaScript ecosystem."
+        />
+      </Head>
       <ServiceTeaser />
       <section className={classes.section}>
         <ResponsiveContainer>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 import { Button, Tag } from 'antd'
 import { makeStyles } from '@material-ui/styles'
@@ -56,6 +57,13 @@ const Portfolio: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Portfolio | Pavel Srom</title>
+        <meta
+          name="description"
+          content="Pavel Srom is a full-stack web developer currently living and studying in Copenhagen. He loves React, and the whole JavaScript ecosystem."
+        />
+      </Head>
       {projects.map(({ imgSrc, headline, bodyText, techUsed, github, demo }, index) => (
         <section
           key={index}
