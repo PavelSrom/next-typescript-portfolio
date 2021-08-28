@@ -48,6 +48,11 @@ export const frontEnd: SkillTree = {
       description:
         'Allows me to install and use just about anything I might need for my projects. One of the reasons JS is so great.',
     },
+    {
+      name: 'Yarn',
+      description:
+        'Basically the same thing as NPM. I have yet to try out Yarn workspaces.',
+    },
   ],
   buildTools: [
     {
@@ -83,14 +88,19 @@ export const frontEnd: SkillTree = {
       name: 'React',
       description:
         "I'm a HUGE React fanboy! I can't imagine building anything more complex without it, it's just amazing.",
-      additional: ['React hooks', 'React router', 'Context API', 'Next.js'],
+      additional: ['React hooks', 'React router', 'Context API', 'Compound components'],
+    },
+    {
+      name: 'Next.js',
+      description:
+        "React on steroids. Ever since I built my first full-stack app using just a single framework, I can't get enough of Next.js.",
     },
   ],
   stateManagement: [
     {
       name: 'Redux',
       description:
-        "I grab it whenever local state isn't enough. It's also React's best friend. I now prefer React Query though.",
+        "I don't use Redux anymore, but I know it almost inside out thanks to legacy codebases still using it.",
     },
     {
       name: 'Apollo client',
@@ -114,6 +124,11 @@ export const frontEnd: SkillTree = {
       description:
         'Awesome-looking custom components that make your page look very Google-ish. Even this website is built with it!',
     },
+    {
+      name: 'Ant Design',
+      description:
+        'This portfolio is built with it! I like the clean look of Ant Design and its minimalistic design.',
+    },
   ],
   frontEndTesting: [
     {
@@ -121,17 +136,12 @@ export const frontEnd: SkillTree = {
       description:
         "Testing framework that makes sure my code isn't buggy and I can sleep at night. Very popular worldwide.",
     },
-    {
-      name: 'Enzyme',
-      description:
-        'Used alongside Jest, this tool is very powerful for testing my components. The two are perhaps THE CHOICE for testing.',
-    },
   ],
   typeCheckers: [
     {
       name: 'TypeScript',
       description:
-        'The larger the project, the more likely I am to use it. Ensures type safety and grows rapidly in popularity.',
+        "Ever since I switched to TypeScript, I haven't looked back. A must-use these days!",
     },
   ],
   nativeAppDevelopment: [
@@ -160,9 +170,9 @@ export const backEnd: SkillTree = {
       description: `It's changing the way we build our APIs, and for a good reason - replaces the good old RESTful architecture.`,
     },
     {
-      name: 'Python (in progress)',
+      name: 'Next.js API routes',
       description:
-        'Python and JavaScript are probably the most versatile languages there are. I am currently learning Python, more is coming.',
+        'Not exactly a framework, but it just blows me away that I can build a full-stack app entirely using just Next.js and its serverless functions.',
     },
   ],
   databases: [
@@ -191,7 +201,7 @@ export const backEnd: SkillTree = {
     {
       name: 'Prisma',
       description:
-        'Makes building a GraphQL API incredibly easy. Prisma truly takes developer experience to the next level.',
+        'Prisma truly takes developer experience to the next level thanks to its type-safe database access.',
     },
   ],
   templateEngines: [
@@ -205,7 +215,17 @@ export const backEnd: SkillTree = {
     {
       name: 'JSON Web Tokens',
       description:
-        'The only thing (at least for now) I need to make sure my API is safe, protected, and checks user permissions.',
+        'The only thing I need to make sure my API is safe, protected, and checks user permissions.',
+    },
+    {
+      name: 'Auth0',
+      description:
+        'A 3rd party auth provider that is well known in the industry. I found it quite easy to use with Next.js.',
+    },
+    {
+      name: 'Next Auth',
+      description:
+        'A simple library intended to solve auth issues with SSR. It is usually my go-to for auth in Next.js.',
     },
   ],
   backEndTesting: [
@@ -241,7 +261,12 @@ export const backEnd: SkillTree = {
     {
       name: 'Advanced Mongoose',
       description:
-        'For fetching only the data you need, and to make things fast - through sorting, pagination, and filtering.',
+        "Aggregations in Mongoose are not exactly what you might like, but they're quite powerful. Speaking from experience.",
+    },
+    {
+      name: 'AWS S3',
+      description:
+        'This is a no-brainer. Whenever I need a scalable place to put files, S3 is the way to go.',
     },
   ],
   deployment: [
@@ -256,61 +281,111 @@ export const backEnd: SkillTree = {
         "Google's own platform where I can deploy static pages and applications. It's fast 24/7, and reliable.",
     },
     {
-      name: 'Vercel (also known as Now)',
+      name: 'Netlify',
       description:
-        'My favorite deployment platform. This is the place to deploy all my projects that are built with Next.js.',
+        'Usually my go-to for simple CRA React apps. I like it for its simplicity and convenient usage.',
+    },
+    {
+      name: 'Vercel',
+      description:
+        'My favorite deployment platform not only for Next.js projects. Has great management tools, simple UI, performance monitoring and more!',
     },
   ],
 }
 
 export const skillsSimple: SkillsSimple = [
   {
-    imgSrc: '/images/mongodb.png',
-    subheadline: 'MongoDB',
-    bodyText: `MongoDB is an open-source, document-driven database. It uses
-		JSON-like documents to store data, which makes it very flexible and
-		easy to work with. I use MongoDB almost always as my go-to database,
-		and use the cloud solution: MongoDB Atlas. This makes it possible to
-		store your data on cloud providers, such as AWS, one of the most
-		reliable servers on the planet.`,
+    imgSrc: '/images/stack/mern.png',
+    url: 'https://www.mongodb.com/mern-stack',
+    subheadline: 'MERN stack',
+    bodyText: `The MERN stack (MongoDB, Express, React, Node.js) got me started
+			with web development. It was the stack I was using to build my first
+			full-stack applications, and for a good reason - the whole stack is based
+			on only one language, which makes it really easy to use. However, I have
+			recently switched to the technologies you can read about below.`,
   },
   {
-    imgSrc: '/images/express.png',
-    subheadline: 'Express',
-    bodyText: `Express is a minimalistic, unopinionated framework for Node.js. In
-		other words, it lets me create my back-end however I want, allowing
-		for great flexibility and quick server-side development. Its bundle
-		size is very small, and creating APIs with Express is a breeze.`,
+    imgSrc: '/images/stack/typescript.png',
+    url: 'https://www.typescriptlang.org/',
+    subheadline: 'TypeScript',
+    bodyText: `I would say TypeScript is a no-brainer in 2021 and beyond. If you're
+		developing a large-scale project and not using it, you're literally shooting
+		yourself to the foot. TypeScript improves developer experience, reduces bugs,
+		supercharges JavaScript with static typing and other incredible features that
+		it just doesn't make sense not to use it.`,
   },
   {
-    imgSrc: '/images/react.png',
-    subheadline: 'React',
-    bodyText: `React is a JavaScript library for building user interfaces. It
-		allows me to build very complex interfaces with ease, thanks to its
-		way of handling data and component-based approach. It's currently
-		the most popular front-end tool in the industry. It has huge
-		community support, Facebook developers maintaining it, and it's not
-		going anywhere in the near future.`,
+    imgSrc: '/images/stack/nextjs.png',
+    url: 'https://nextjs.org/',
+    subheadline: 'Next.js',
+    bodyText: `Perhaps my favorite framework these days. It is basically React
+			on steroids - enriching React with features that standard single-page apps
+			just do not have, such as automatic per-page code splitting, static site
+			generation, server-side rendering and most recently also API routes which
+			allow you to extend your front-end application by adding a back-end to it.`,
   },
   {
-    imgSrc: '/images/nodejs.png',
-    subheadline: 'Node.js',
-    bodyText: `Node.js is JavaScript runtime environment which allows me to execute
-		JavaScript code outside of a web browser. In practice, this means I
-		can write JavaScript on the server, making the entire stack use just
-		one language, which has a lot of benefits. It's non-blocking, very
-		fast, and one of the most popular server-side technologies out
-		there.`,
+    imgSrc: '/images/stack/react query.svg',
+    url: 'https://react-query.tanstack.com/',
+    subheadline: 'React Query',
+    bodyText: `My favorite state management library. Since most of global state
+			is basically just data from API, React Query makes it a breeze to work
+			with this type of data. It supports two things crucial to a better user
+			experience - caching and optimistic updates. I have been using React Query
+			as a replacement for Redux and have never looked back since.`,
   },
   {
-    imgSrc: '/images/graphql.png',
-    subheadline: 'GraphQL',
-    bodyText: `A revolutionary way to build APIs - that's what GraphQL is. It's a
-		query language that allows me to build extremely flexible APIs, and
-		it works with any back-end and any database. With GraphQL, the
-		front-end can ask for what it needs with just a single request, and
-		gets exactly that. Nothing more, nothing less. I'm really excited
-		about it, particularly because it's gaining a ton of traction and
-		has a large ecosystem.`,
+    imgSrc: '/images/stack/tailwindcss.png',
+    url: 'https://tailwindcss.com/',
+    subheadline: 'Tailwind CSS',
+    bodyText: `My go-to CSS library for quick and easy styling of my applications.
+			Unlike Bootstrap and other class-based styling libraries, Tailwind CSS works
+			in a different fashion - it is low-level and utility-based CSS library, it
+			supports custom theming and configuration, removes unused CSS in production,
+			and much more!`,
+  },
+  {
+    imgSrc: '/images/stack/next auth.png',
+    url: 'https://next-auth.js.org/',
+    subheadline: 'Next Auth',
+    bodyText: `Next Auth is a simple and powerful authentication tool for Next.js
+			apps. It supports multiple authentication strategies, such as signing in with
+			only email and password, google, github and other providers.`,
+  },
+  {
+    imgSrc: '/images/stack/prisma.png',
+    url: 'https://prisma.io/',
+    subheadline: 'Prisma',
+    bodyText: `Prisma is perhaps the only ORM that is truly type-safe, and while it
+			still lacks certain advanced features that other ORMs have, its ingenuity and ease of
+			use take developer experience to the next level. Prisma recently added support
+			for MongoDB, which means I don't need to use any other ORM, regardless of what
+			database I'm using.`,
+  },
+  {
+    imgSrc: '/images/stack/postgresql.png',
+    url: 'https://www.postgresql.org/',
+    subheadline: 'PostgreSQL',
+    bodyText: `PostgreSQL needs no further introduction - this relational database
+			has been around for decades, proving its reliability and scalability. I usually
+			use it in tandem with Prisma.`,
+  },
+  {
+    imgSrc: '/images/stack/s3.png',
+    url: 'https://aws.amazon.com/s3/',
+    subheadline: 'AWS S3',
+    bodyText: `Arguably the most famous file storage. Amazon Web Services are slowly
+			but surely becoming the standard for most developers, and its file storage
+			solution is no different. S3 scales virtually infinitely, is very cheap and
+			easy to get started with. This is where I upload files of all kinds.`,
+  },
+  {
+    imgSrc: '/images/stack/vercel.png',
+    url: 'https://vercel.com/',
+    subheadline: 'Vercel',
+    bodyText: `A serverless deployment platform that is super easy to use, makes
+			deploying Next.js apps a piece of cake, and provides a generous free tier.
+			Vercel makes various DevOps tasks really easy to do and supports basic
+			error tracking and performance monitoring analytics.`,
   },
 ]

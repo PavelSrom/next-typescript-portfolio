@@ -5,6 +5,33 @@ import { Project } from './types'
 
 export const projects: Project[] = [
   {
+    imgSrc: '/images/proj_classco.png',
+    headline: 'ClassCo - helping students and teachers collaborate',
+    bodyText: [
+      `A refactor of the ClassCo mini-Bachelor school project. The original
+				version has been built with a single-page (CRA) React in TypeScript
+				front-end and a back-end in Django. I was in charge of the entire
+				front-end codebase.`,
+      <br />,
+      <br />,
+      `This application has been refactored to using just a single
+				framework - Next.js. It is my first and definitely not last Next.js
+				full-stack application that uses API routes as a back-end. I fell in
+				love with Next.js while building this - it is still mind-bending to me
+				that I can build a full application using just one framework where API
+				endpoints are serverless functions hosted on AWS Lambda.`,
+      <br />,
+      <br />,
+      `This might actually be my new favorite stack - Next.js in TypeScript,
+				Prisma, PostgreSQL, Tailwind CSS, React Query and either Next-auth or
+				Auth0. The whole refactor only took about 10 hours, and I love how
+				easy it is to build apps with Next.js.`,
+    ],
+    techUsed: ['Next.js + API routes', 'Prisma', 'Next-auth', 'React Query'],
+    github: 'https://github.com/PavelSrom/minibachelor-next-fullstack',
+    demo: 'https://minibachelor-next-fullstack.vercel.app/',
+  },
+  {
     imgSrc: '/images/proj_ecommerce.png',
     headline: 'E-commerce website',
     bodyText: [
@@ -31,53 +58,5 @@ export const projects: Project[] = [
     techUsed: ['MERN stack', 'Redux', 'Material UI'],
     github: 'https://github.com/PavelSrom/MERN-ecommerce',
     demo: 'https://pavel-ecommerce.herokuapp.com/',
-  },
-  {
-    imgSrc: '/images/proj_socmedApp.png',
-    headline: 'Social media app',
-    bodyText: [
-      `The goal of this app was to practice using TypeScript within my
-			stack - which is also why this app is built entirely in it. I
-			didn't want to make anything super complex, but not anything
-			simple, either. I simply wanted to learn how to use TypeScript
-			with React, Redux, and Express.`,
-      <br />,
-      <br />,
-      `Another thing I have learned along the way is how to handle file
-			upload all the way from the client choosing a picture to the server
-			handling it.`,
-      <br />,
-      <br />,
-      `I have found that using TypeScript in my personal projects is too
-			much and unnecessary - however, I see the great advantage of TypeScript
-			being in bigger projects and companies, where it may by all means
-			increase productivity significantly.`,
-    ],
-    techUsed: ['MERN stack', 'TypeScript', 'Material UI'],
-    github: 'https://github.com/PavelSrom/socmed-app-typescript',
-    demo: 'https://murmuring-dusk-35278.herokuapp.com/',
-  },
-  {
-    imgSrc: '/images/proj_weightAppEnhanced.png',
-    headline: 'Weight tracker app',
-    bodyText: [
-      `My very first project which I built right after finishing my
-			MERN-stack Udemy course. It's basically the same app that my
-			project group made in school API elective, but upgraded. What's
-			new is that I replaced SQL database with MongoDB, users can save
-			their favorite exercise, truly add only one log per day and see
-			all of their stats directly in dashboard.`,
-      <br />,
-      <br />,
-      `I focused mainly on building my API with Express and
-			MongoDB, managing user authentication in React via private routes,
-			and managing data in Redux instead of having multiple local
-			states. Design is done in Material UI (custom pre-designed React
-			components that implement Google's material design), and I also
-			replaced class-based components with React hooks.`,
-    ],
-    techUsed: ['MongoDB', 'Express', 'React', 'Node.js'],
-    github: 'https://github.com/PavelSrom/weight-app-enhanced',
-    demo: 'https://secret-basin-32227.herokuapp.com/',
   },
 ]

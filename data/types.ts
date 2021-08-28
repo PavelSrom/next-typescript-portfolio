@@ -7,6 +7,7 @@ export type Skill = {
 export type SkillTree = Record<string, Skill[]>
 export type SkillsSimple = {
   imgSrc: string
+  url: string
   subheadline: string
   bodyText: string
 }[]
